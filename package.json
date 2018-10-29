@@ -1,0 +1,24 @@
+{
+  "name": "new_messenger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=app,app:* nodemon app.js",
+    "lint": "eslint app.js"
+  },
+  "author": "Mark Chan",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "debug": "^4.1.0",
+    "express": "^4.16.4",
+    "jquery": "^3.3.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.5",
+    "q": "^1.5.1",
+    "socketio": "^1.0.0",
+    "url-parse": "^1.4.3"
+  }
+}
