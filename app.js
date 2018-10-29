@@ -2,11 +2,22 @@
 const express = require('express');
 const debug = require('debug')('app');
 const morgan = require('morgan');
-const path = require('path');
 const chalk = require('chalk');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+
+
+
+
+
 const app = express();
 app.use(morgan('tiny'));
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
+app.use(session({secret: 'messenger'}));
+require('./config/passport')(app);
 app.use(function (req, res, next) {
   debug("middlewre");
   // Website you wish to allow to connect
@@ -36,4 +47,3 @@ const server = app.listen(port, () => {
   debug('listening on port http://%s:%s', host, chalk.green(port));
 });
 
-// webCrawler.crawlinit();
