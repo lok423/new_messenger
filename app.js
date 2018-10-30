@@ -37,7 +37,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-// app.use('/api/preparedata',require('./controllers/preparedata.controller'));
+app.use('/api',require('./routes/api.js'));
 var database = require('./controllers/local.database.controller');
 const port = process.env.PORT || 3000;
 
