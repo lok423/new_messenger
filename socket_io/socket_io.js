@@ -1,6 +1,6 @@
 const socketIo = require('socket.io');
 
-function socketInit(server){
+module.exports = function socketInit(server){
     const io = socketIo(server);
     io.use(function(socket, next) {
         /*
@@ -21,7 +21,7 @@ function socketInit(server){
       }).on('connect', (socket) => {
         console.log('Connected client');
 
-        socket.on('contact list');
+        // socket.on('contactlist');
     
     
     
