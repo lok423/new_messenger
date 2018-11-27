@@ -1,7 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const userService= require('../controllers/user.controller');
+// const userController= require('../controllers/user.controller');
 
-router.all('/users', userService);
+// router.all('/users', require('../controllers/user.controller'));
+// // router.get('/', demo);
+
+// // function demo(){
+// //     console.log('hello');
+// // }
 
 module.exports = router;
